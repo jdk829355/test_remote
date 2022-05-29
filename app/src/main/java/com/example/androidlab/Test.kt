@@ -1,13 +1,11 @@
 package com.example.androidlab
 
-fun main(){
+fun main() {
     var data = 10
-    var result = if (data>0){
-        println("data > 0")
-        true
-    }else{
-        println("data <= 0")
-        false
+    var result = when {
+        data <= 0 -> "data is <= 0"
+        data > 100 -> "data is > 100"
+        else -> "data is valid"
     }
     println(result)
 }
